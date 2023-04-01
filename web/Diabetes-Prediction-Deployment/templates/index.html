@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Patient Readmission in 30 Days Risk Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Diabetes Patient Readmission in 30 Days Risk Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using AWS EC2.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="num_lab_procedures" placeholder="Number of Lab Procedures eg. 40"><br>
+                <input class="form-input" type="text" name="diag_1" placeholder="Diag 1 value eg. 511"><br>
+                <input class="form-input" type="text" name="diag_2" placeholder="Diag 2 value eg. 571"><br>
+                <input class="form-input" type="text" name="diag_3" placeholder="Diag 3 value eg. 585"><br>
+                <input class="form-input" type="text" name="num_medications" placeholder="Number of Medications eg. 15"><br>
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 54"><br>
+                <input class="form-input" type="text" name="discharge_disposition_id" placeholder="Discharge Disposition ID eg. 2"><br>
+                <input class="form-input" type="text" name="medical_specialty" placeholder="Medical Specialty eg. 1"><br>
+
+                <input class="form-input" type="text" name="time_in_hospital" placeholder="Time in Hospital (days) eg. 9"><br>
+                <input class="form-input" type="text" name="num_procedures" placeholder="Number of Procedures eg. 3"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://www.ics.uci.edu/~cs230/"><i class="fab fa-github fa-lg contact-icon"></i></a>
+{#               <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>#}
+           </div>
+           <p class='footer-description'>Made with ❤️ by Ziyu Wang, Wenjun Huang and Yang Liu.</p>
+       </div>
+
+    </body>
+</html>
